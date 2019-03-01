@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Installs the tree package
+      apt: name=tree state=present update_cache=yes
+
+      name: wget Installs
+      apt: name=wget state=present
+
+      name: copy a file to nodes
+      copy: src=/home/bharath/hussain_files dest=/home/ubuntu/ 
+
+        
+  
